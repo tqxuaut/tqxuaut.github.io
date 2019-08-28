@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>git学习笔记 // My New Hugo Site</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.57.2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://tqxuaut.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="git学习笔记"/>
+<meta name="twitter:description" content="git学习笔记 基本操作  创建版本库 git init
+ 将文件添加到仓库 git add 文件名 将文件修改添加到暂存区（stage） git add -all 提交所有已经修改的文件
+  git commit -m &quot;提交的说明&quot; 将暂存区的所有内容提交到当前分支 注：可以多次add然后再一次commit，一旦提交后，如果未对工作区做任何修改，那么工作 区就是“clean”的，暂存区是空的。
+版本处理  查看仓库当前状态 git satus
+ 查看修改内容 git diff
+  eg：git diff HEAD --readme.txt 查看工作区和版本库里面最新版本的不同
+ 查看修改日志 git log
+ 版本往返 git reset --hard commit_id 在版本历史之间穿梭
+   HEAD代表当前版本 HEAD^上一个版本 HEAD^^上上一个版本 以此类推
+HEAD~100回退到100个版本以前
+ git log 查看提交历史 git reflog 查看命令历史
+ 撤销修改git checkout &ndash;file  （1）git checkout -- file 将文件回到最近一次git commit 或git add时的状态"/>
+
+    <meta property="og:title" content="git学习笔记" />
+<meta property="og:description" content="git学习笔记 基本操作  创建版本库 git init
+ 将文件添加到仓库 git add 文件名 将文件修改添加到暂存区（stage） git add -all 提交所有已经修改的文件
+  git commit -m &quot;提交的说明&quot; 将暂存区的所有内容提交到当前分支 注：可以多次add然后再一次commit，一旦提交后，如果未对工作区做任何修改，那么工作 区就是“clean”的，暂存区是空的。
+版本处理  查看仓库当前状态 git satus
+ 查看修改内容 git diff
+  eg：git diff HEAD --readme.txt 查看工作区和版本库里面最新版本的不同
+ 查看修改日志 git log
+ 版本往返 git reset --hard commit_id 在版本历史之间穿梭
+   HEAD代表当前版本 HEAD^上一个版本 HEAD^^上上一个版本 以此类推
+HEAD~100回退到100个版本以前
+ git log 查看提交历史 git reflog 查看命令历史
+ 撤销修改git checkout &ndash;file  （1）git checkout -- file 将文件回到最近一次git commit 或git add时的状态" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tqxuaut.github.io/gitnotes/" />
+<meta property="article:published_time" content="2019-08-28T23:53:25+08:00" />
+<meta property="article:modified_time" content="2019-08-28T23:53:25+08:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://tqxuaut.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>My New Hugo Site</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">git学习笔记</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Aug 28, 2019
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      
+
+<h2 id="git学习笔记">git学习笔记</h2>
+
+<p><img src="C:Users13441Desktop竞赛信息管理系统git版本库.png" alt="" /></p>
+
+<h4 id="基本操作">基本操作</h4>
+
+<ul>
+<li><p>创建版本库
+<code>git init</code></p></li>
+
+<li><p>将文件添加到仓库
+<code>git add</code> 文件名    将文件修改添加到暂存区（stage）   git add  -all    提交所有已经修改的文件</p></li>
+</ul>
+
+<p><code>git commit -m   &quot;提交的说明&quot;</code>   将暂存区的所有内容提交到当前分支
+  注：可以多次add然后再一次commit，一旦提交后，如果未对工作区做任何修改，那么工作          区就是“clean”的，暂存区是空的。</p>
+
+<h4 id="版本处理">版本处理</h4>
+
+<ol>
+<li><p>查看仓库当前状态
+<code>git satus</code></p></li>
+
+<li><p>查看修改内容
+<code>git diff</code></p></li>
+</ol>
+
+<p><code>eg：git diff HEAD --readme.txt</code> 查看工作区和版本库里面最新版本的不同</p>
+
+<ol>
+<li><p>查看修改日志
+git log</p></li>
+
+<li><p>版本往返
+<code>git reset --hard commit_id</code>    在版本历史之间穿梭</p></li>
+</ol>
+
+<blockquote>
+<p>HEAD代表当前版本  HEAD^上一个版本   HEAD^^上上一个版本 以此类推</p>
+
+<p>HEAD~100回退到100个版本以前</p>
+</blockquote>
+
+<p><code>git log</code>      查看提交历史
+   <code>git reflog</code>    查看命令历史</p>
+
+<ol>
+<li>撤销修改git checkout &ndash;file</li>
+</ol>
+
+<p><strong>（1）<code>git checkout -- file</code>    将文件回到最近一次git commit 或git add时的状态</strong></p>
+
+<ul>
+<li>文件自修改后还没有被放到暂存区，执行命令后文件会回到和版本库一样的状态，即回到最近一次git  commit之后的状态。</li>
+<li>文件已经添加到暂存区后，又做了修改，执行命令后文件会回到和暂存区中的内容一样的状态，即回到最近一次git add之后的状态</li>
+</ul>
+
+<p><strong>（2）<code>git reset HEAD &lt;file&gt;</code>   撤销暂存区的修改，重新放回工作区</strong></p>
+
+<ul>
+<li>在文件已经执行git add命令之后发现有错误需要撤销（unstage）add到暂存区的内容。执行命令之后暂存区将被清空，即暂存区是”clean“的，工作区有修改。</li>
+</ul>
+
+<ol>
+<li><p>删除文件</p>
+
+<ul>
+<li>当需要删除一个文件时，在文件管理器中直接删除会导致版本库和工作区中的内容不一致，因此在删除文件时需要先用&rdquo;git rm &ndash;file&rdquo;之后，再&rdquo;git commit&rdquo;。</li>
+<li>当误删除了一个文件时，直接使用&rdquo;git checkout &ndash; file&rdquo;，即可还原。&rdquo;git checkout&rdquo;是用版本库中的吧版本替换工作区中的版本。无论是修改还是删除，都可以还原。</li>
+</ul></li>
+</ol>
+
+<h4 id="远程仓库">远程仓库</h4>
+
+<ol>
+<li><p>添加远程仓库</p>
+
+<ul>
+<li><code>git remote add</code> &ldquo;远程仓库名&rdquo; &ldquo;远程仓库的地址&rdquo;   ——将本地仓库与远程仓库关联</li>
+</ul>
+
+<p><code>eg: git remote add origin git@github.com:tqxu/learngit.git</code></p>
+
+<ul>
+<li><code>git push</code>  ——将本地仓库内容推送到远程仓库,实际是将本地仓库的master分支推送到远程仓库</li>
+</ul>
+
+<p><code>eg: git push -u origin master</code></p>
+
+<p>-u 将本地的master分支和远程的master分支关联起来，方便以后的push和pull</p></li>
+</ol>
+
+<blockquote>
+<p>执行以上命令后，只要本地做了提交，就可以通过命令&rdquo;git push origin master&rdquo;，将本地master分支的的最新修改推送到远程仓库。</p>
+</blockquote>
+
+<ol>
+<li>从远程库克隆</li>
+</ol>
+
+<p><code>git clone</code> &ldquo;远程仓库地址&rdquo;</p>
+
+<h4 id="分支管理">分支管理</h4>
+
+<ol>
+<li>创建分支
+
+<ul>
+<li><code>git checkout -b dev</code>        创建一个名为dev的分支</li>
+</ul></li>
+</ol>
+
+<ul>
+<li><code>git branch</code>          列出所有分支，当前分支前面会有一个*</li>
+
+<li><p><code>git branch -a</code>     查看远程分支</p></li>
+
+<li><p><code>git merge dev</code>       将dev分支与当前分支合并</p></li>
+
+<li><p><code>git branch -d dev</code>     删除dev分支</p></li>
+
+<li><p><code>git checkout -b feature_branch dev</code>       从dev分支创建一个新的分支&rdquo;feature_branch&rdquo;</p></li>
+</ul>
+
+<blockquote>
+<p>加上-b参数表示创建并切换，相当于以下两个命令</p>
+
+<p><code>git branch dev</code>            创建分支</p>
+
+<p><code>git checkout dev</code>         切换分支</p>
+
+<p>创建、合并和删除分支的速度很快，所以可以使用分支完成某个任务，合并后再删除分支，这样比直接在<code>master</code>分支上直接工作更加安全。</p>
+</blockquote>
+
+<ol>
+<li>解决冲突</li>
+</ol>
+
+<p>当两个分支互有不同的地方时，合并分支时便会产生冲突。</p>
+
+<p>解决方法：</p>
+
+<ol>
+<li>分支管理策略</li>
+</ol>
+
+<p>合并分支时，加上<code>--no-ff</code>参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而<code>fast forward</code>合并就看不出来曾经做过合并。</p>
+
+<p>eg:<code>git merge --no-ff -m &quot;merge with no-ff&quot; dev</code></p>
+
+<ol>
+<li>bug分支</li>
+</ol>
+
+<p>当你接到一个修复一个代号101的bug的任务时，很自然地，你想创建一个分支<code>issue-101</code>来修复它，但是，等等，当前正在<code>dev</code>上进行的工作还没有提交.此时若是切换分支会丢失当前修改。</p>
+
+<ul>
+<li><code>git stash</code>——使用<code>git stash</code>功能可以将当前的工作现场保存起来，等以后恢复现场之后可以继续工作。执行git stash命令之后使用<code>git status</code>命令查看工作区状态，工作区是clean的。</li>
+<li><code>git stash list</code>——查看工作现场列表</li>
+<li>恢复现场
+
+<ul>
+<li><code>git stash apply</code>——恢复现场，但是stash的内容不删除</li>
+<li><code>git stash pop</code>——恢复现场的同时删除stash中的内容</li>
+</ul></li>
+</ul>
+
+<ol>
+<li>feature分支</li>
+</ol>
+
+<p>开发一个新feature时，最好新建一个分支。但是如果需要丢弃这个分支时，因为分支未被合并，提交时直接删除会出现错误。通过<code>git branch -D &lt;name&gt;</code>强行删除。</p>
+
+<ol>
+<li><p>多人协作</p>
+
+<ul>
+<li><p>查看远程仓库信息——<code>git remote / git remote -v</code></p></li>
+
+<li><p>推送分支——将本地提交的内容提交到远程仓库</p></li>
+</ul>
+
+<p>git push origin master     将本地master分支的内容提交到远程仓库</p>
+
+<blockquote>
+<p>并不是一定要把本地分支往远程推送</p>
+
+<ul>
+<li><code>master</code>分支是主分支，因此要时刻与远程同步；</li>
+<li><code>dev</code>分支是开发分支，团队所有成员都需要在上面工作，所以也需要与远程同步；</li>
+<li>bug分支只用于在本地修复bug，就没必要推到远程了，除非老板要看看你每周到底修复了几个bug；</li>
+<li>feature分支是否推到远程，取决于你是否和你的小伙伴合作在上面开发。</li>
+</ul>
+</blockquote>
+
+<ul>
+<li>抓取分支——<code>git pull</code></li>
+</ul>
+
+<blockquote>
+<p>多人协作的工作模式：</p>
+
+<ol>
+<li>首先，可以试图用<code>git push origin &lt;branch-name&gt;</code>推送自己的修改；</li>
+<li>如果推送失败，则因为远程分支比你的本地更新，需要先用<code>git pull</code>试图合并；</li>
+<li>如果合并有冲突，则解决冲突，并在本地提交；</li>
+<li>没有冲突或者解决掉冲突后，再用<code>git push origin &lt;branch-name&gt;</code>推送就能成功！</li>
+</ol>
+
+<p>如果<code>git pull</code>提示<code>no tracking information</code>，则说明本地分支和远程分支的链接关系没有创建，用命令<code>git branch --set-upstream-to &lt;branch-name&gt; origin/&lt;branch-name&gt;</code>。</p>
+</blockquote></li>
+</ol>
+
+<h4 id="标签管理">标签管理</h4>
+
+<ol>
+<li>创建标签
+
+<ul>
+<li>命令<code>git tag &lt;tagname&gt;</code>用于新建一个标签，默认为<code>HEAD</code>，也可以指定一个commit id；</li>
+<li>命令<code>git tag -a &lt;tagname&gt; -m &quot;blablabla...&quot;</code>可以指定标签信息；</li>
+<li>命令<code>git tag</code>可以查看所有标签。</li>
+</ul></li>
+<li>操作标签
+
+<ul>
+<li>命令<code>git push origin &lt;tagname&gt;</code>可以推送一个本地标签；</li>
+<li>命令<code>git push origin --tags</code>可以推送全部未推送过的本地标签；</li>
+<li>命令<code>git tag -d &lt;tagname&gt;</code>可以删除一个本地标签；</li>
+<li>命令<code>git push origin :refs/tags/&lt;tagname&gt;</code>可以删除一个远程标签。</li>
+</ul></li>
+</ol>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
