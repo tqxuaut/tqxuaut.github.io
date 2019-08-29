@@ -6,10 +6,26 @@
     <description>Recent content on Eve的算法博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Aug 2019 23:53:25 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 29 Aug 2019 16:09:25 +0800</lastBuildDate>
     
 	<atom:link href="https://tqxuaut.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Windows平台通过Hugo搭建个人博客教程</title>
+      <link>https://tqxuaut.github.io/windows%E5%B9%B3%E5%8F%B0%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Thu, 29 Aug 2019 16:09:25 +0800</pubDate>
+      
+      <guid>https://tqxuaut.github.io/windows%E5%B9%B3%E5%8F%B0%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</guid>
+      <description>Windows平台通过Hugo搭建个人博客教程  安装Hugo  Hugo的安装可以直接通过Hugo官网下载二进制版本，解压后将exe文件的路径添加至系统的环境变量之中即可。 (1)在Hugo的GitHub主页 https://github.com/gohugoio/hugo/releases 下载Hugo最新的二进制版本。 (2)建立如下文件夹，分别存放Hugo的exe文件和你自己的博客内容。 (3)将Hugo的exe文件的路径添加至系统的环境变量的路径。 这个时候Hugo就已经安装完成了，可以通过在命令行窗口执行命令hugo -v检测Hugo是否安装完成，如果显示出Hugo的具体信息则表示Hugo已经正确安装完成。如果没有显示或者显示其它内容则表示没有安装好，需要去按照上述步骤检查是否是哪一步出了错误。
+ 在本地新建一个博客仓库  这一步是通过Hugo建立一个博客仓库，存储博客的各种文件。在sites文件夹里面执行命令hugo new site myblog。通过执行这个命令，hugo会生成一系列的博客所需要的文件。
+ 给博客配置主题
+Hugo的官网有众多精美的主题，可以在 https://themes.gohugo.io/ 进行下载。在每个主题的详细信息界面有下载的方法，直接按照它提供的方法下载下来放置theme文件夹即可。
+ 将博客部署至本地服务器 hugo server -t &amp;ldquo;themename&amp;rdquo; &amp;ndash;buildDrafts
+ 新建第一篇文章 hugo new firstpage.md 这个命令会在content文件夹中生成一个名为firstpage的Markdown文件，这个文件会显示在的博客上。
+ 将博客部署至远程服务器
+ 在GitHub上新建一个空的仓库 tqxuaut.github.io 仓库名称的要求： 命令hugo &amp;ndash;theme=m10c &amp;ndash;baseUrl=&amp;ldquo;https://tqxuaut.github.io/&amp;quot; &amp;ndash;buildDrafts 此命令会生成一个public文件夹，里面是网页格式的文件 将public文件夹下的文件上传至GitHub远程仓库 git init git add . git commit -m &amp;ldquo;提交说明&amp;rdquo; 将本地仓库与远程仓库绑定 git remote add origin https://github.com/tqxuaut/tqxuaut.github.io.git 提交到远程仓库 git push -u origin master   至此整个博客便已经创建完成，通过访问 https://tqxuaut.</description>
+    </item>
     
     <item>
       <title>git学习笔记</title>
@@ -29,22 +45,6 @@
 HEAD~100回退到100个版本以前
  git log 查看提交历史 git reflog 查看命令历史
  撤销修改git checkout &amp;ndash;file  （1）git checkout -- file 将文件回到最近一次git commit 或git add时的状态</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://tqxuaut.github.io/windows%E5%B9%B3%E5%8F%B0%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://tqxuaut.github.io/windows%E5%B9%B3%E5%8F%B0%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</guid>
-      <description>Windows平台通过Hugo搭建个人博客教程  安装Hugo  Hugo的安装可以直接通过Hugo官网下载二进制版本，解压后将exe文件的路径添加至系统的环境变量之中即可。 (1)在Hugo的GitHub主页 https://github.com/gohugoio/hugo/releases 下载Hugo最新的二进制版本。 (2)建立如下文件夹，分别存放Hugo的exe文件和你自己的博客内容。 (3)将Hugo的exe文件的路径添加至系统的环境变量的路径。 这个时候Hugo就已经安装完成了，可以通过在命令行窗口执行命令hugo -v检测Hugo是否安装完成，如果显示出Hugo的具体信息则表示Hugo已经正确安装完成。如果没有显示或者显示其它内容则表示没有安装好，需要去按照上述步骤检查是否是哪一步出了错误。
- 在本地新建一个博客仓库  这一步是通过Hugo建立一个博客仓库，存储博客的各种文件。在sites文件夹里面执行命令hugo new site myblog。通过执行这个命令，hugo会生成一系列的博客所需要的文件。
- 给博客配置主题
-Hugo的官网有众多精美的主题，可以在 https://themes.gohugo.io/ 进行下载。在每个主题的详细信息界面有下载的方法，直接按照它提供的方法下载下来放置theme文件夹即可。
- 将博客部署至本地服务器 hugo server -t &amp;ldquo;themename&amp;rdquo; &amp;ndash;buildDrafts
- 新建第一篇文章 hugo new firstpage.md 这个命令会在content文件夹中生成一个名为firstpage的Markdown文件，这个文件会显示在的博客上。
- 将博客部署至远程服务器
- 在GitHub上新建一个空的仓库 tqxuaut.github.io 仓库名称的要求： 命令hugo &amp;ndash;theme=m10c &amp;ndash;baseUrl=&amp;ldquo;https://tqxuaut.github.io/&amp;quot; &amp;ndash;buildDrafts 此命令会生成一个public文件夹，里面是网页格式的文件 将public文件夹下的文件上传至GitHub远程仓库 git init git add . git commit -m &amp;ldquo;提交说明&amp;rdquo; 将本地仓库与远程仓库绑定 git remote add origin https://github.com/tqxuaut/tqxuaut.github.io.git 提交到远程仓库 git push -u origin master   至此整个博客便已经创建完成，通过访问 https://tqxuaut.</description>
     </item>
     
   </channel>
